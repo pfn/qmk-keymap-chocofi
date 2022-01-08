@@ -16,7 +16,7 @@ enum my_combos {
   RF_SHOS,
   UJ_SHOS,
   FG_CAPS,
-  HJ_NUM,
+  YH_NUM,
   QA_ESC,
   AZ_TAB,
   PCLN_BS,
@@ -30,7 +30,7 @@ const uint16_t COMBO_LEN = COMBO_COUNT;
 #define MAKE_COMBO(name, keycode) [name] = COMBO(name ## _combo, keycode)
 COMBO_KEYS(RF_SHOS,      KC_R, LT(_NAV, KC_F));
 COMBO_KEYS(UJ_SHOS,      KC_U, KC_J);
-COMBO_KEYS(HJ_NUM,       KC_H, KC_J);
+COMBO_KEYS(YH_NUM,       KC_Y, KC_H);
 COMBO_KEYS(FG_CAPS,      LT(_NAV, KC_F), LT(_MOUSE, KC_G));
 COMBO_KEYS(QA_ESC,       KC_Q, LCTL_T(KC_A));
 COMBO_KEYS(AZ_TAB,       LCTL_T(KC_A), LSFT_T(KC_Z));
@@ -41,7 +41,7 @@ combo_t key_combos[COMBO_COUNT] = {
     MAKE_COMBO(RF_SHOS,      SH_OS),
     MAKE_COMBO(UJ_SHOS,      SH_OS),
     MAKE_COMBO(FG_CAPS,      KC_CAPS),
-    MAKE_COMBO(HJ_NUM,       OSL(_NUM)),
+    MAKE_COMBO(YH_NUM,       OSL(_NUM)),
     MAKE_COMBO(QA_ESC,       KC_ESC),
     MAKE_COMBO(AZ_TAB,       KC_TAB),
     MAKE_COMBO(PCLN_BS,      KC_BSPC),
