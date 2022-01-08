@@ -101,7 +101,7 @@ bool oled_task_user(void) {
         oled_render_layer_state();
         render_mod_status(get_mods());
     } else {
-        render_stars();
+        if (is_oled_on()) render_stars();
     }
     return false;
 }
