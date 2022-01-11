@@ -1,9 +1,15 @@
 #include QMK_KEYBOARD_H
 
 #include "ocean_dream.h"
+#include "process_keymap.h"
+
+void matrix_init_user(void) {
+    numpad_layer = 2;
+}
 
 enum my_layers {
     _QWERTY,
+    _COLEMAK,
     _NUM,
     _SYM,
     _NAV,
@@ -61,6 +67,9 @@ void oled_render_layer_state(void) {
     switch (get_highest_layer(layer_state | default_layer_state)) {
         case _QWERTY:
             oled_write_ln_P(PSTR("QWERTY"), false);
+            break;
+        case _COLEMAK:
+            oled_write_ln_P(PSTR("COLEMAK"), false);
             break;
         case _NUM:
             oled_write_ln_P(PSTR("Numpad"), false);
