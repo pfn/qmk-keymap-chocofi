@@ -3,10 +3,6 @@
 #include "ocean_dream.h"
 #include "process_keymap.h"
 
-void matrix_init_user(void) {
-    numpad_layer = 2;
-}
-
 enum my_layers {
     _QWERTY,
     _COLEMAK,
@@ -17,6 +13,11 @@ enum my_layers {
     _MEDIA,
     _COL6,
 };
+
+void matrix_init_user(void) {
+    numpad_layer = _NUM;
+    sym_layer = _SYM;
+}
 
 enum my_combos {
   RF_SHOS,
